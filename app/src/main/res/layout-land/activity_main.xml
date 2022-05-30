@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4E5BF"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/computer_store"
+            android:textColor="#00838F"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="63dp"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/item"
+            android:textColor="#00838F"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+        <TextView
+            android:id="@+id/lblQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/lblQuantity"
+            android:textColor="#00838F"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRam"
+            app:layout_constraintStart_toStartOf="@+id/txtRam"
+            app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+        <TextView
+            android:id="@+id/txtCpuOrdered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/lblCpu_350_00"
+            android:textColor="#00838F"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/lblItem"
+            app:layout_constraintTop_toBottomOf="@+id/lblItem" />
+
+        <TextView
+            android:id="@+id/lblRam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/lblRam_250_00"
+            android:textColor="#00838F"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/txtCpuOrdered"
+            app:layout_constraintTop_toBottomOf="@+id/txtCpuOrdered" />
+
+        <TextView
+            android:id="@+id/lblMouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/lblMouse_15_50"
+            android:textColor="#00838F"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/lblRam"
+            app:layout_constraintTop_toBottomOf="@+id/lblRam" />
+
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/btnOrder"
+            android:textColor="#555555"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblUsb" />
+
+        <EditText
+            android:id="@+id/txtCpu"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginBottom="59dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblRam"
+            app:layout_constraintEnd_toEndOf="@+id/lblQuantity"
+            app:layout_constraintStart_toStartOf="@+id/lblQuantity"
+            app:layout_constraintTop_toTopOf="@+id/lblQuantity" />
+
+        <EditText
+            android:id="@+id/txtRam"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="59dp"
+            android:layout_marginBottom="58dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtMouse"
+            app:layout_constraintEnd_toEndOf="@+id/txtMouse"
+            app:layout_constraintStart_toStartOf="@+id/txtMouse"
+            app:layout_constraintTop_toTopOf="@+id/txtCpu" />
+
+        <EditText
+            android:id="@+id/txtMouse"
+            android:layout_width="89dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginRight="79dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblMouse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblMouse" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/spinner_array"
+            android:prompt="@string/prompt"
+            android:spinnerMode="dialog"
+            app:layout_constraintStart_toStartOf="@+id/txtMouse"
+            app:layout_constraintTop_toBottomOf="@+id/txtMouse" />
+
+        <TextView
+            android:id="@+id/lblUsb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/usb_8_50"
+            android:textColor="#00838F"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/lblMouse"
+            app:layout_constraintTop_toBottomOf="@+id/lblMouse" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
